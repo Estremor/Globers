@@ -1,0 +1,45 @@
+﻿@model Globers.Models.LibroModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LibroModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="editorial" class="control-label"></label>
+                <input asp-for="editorial" class="form-control" />
+                <span asp-validation-for="editorial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="titulo" class="control-label"></label>
+                <input asp-for="titulo" class="form-control" />
+                <span asp-validation-for="titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sipnosis" class="control-label"></label>
+                <input asp-for="sipnosis" class="form-control" />
+                <span asp-validation-for="sipnosis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nPaginas" class="control-label"></label>
+                <input asp-for="nPaginas" class="form-control" />
+                <span asp-validation-for="nPaginas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

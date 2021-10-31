@@ -1,0 +1,37 @@
+﻿@model List<Globers.Models.AutorModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<table class="classic_table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Raw(item.nombre)
+                </td>
+                <td>
+                    @Html.Raw(item.apellido)
+                </td>
+
+                <td>
+                    <a href="@Html.Raw(item.id)" class="icon i_remove icon_tooltip js_click"><span>editar</span></a>
+                    <a class="icon i_remove icon_tooltip js_click"><span>Eliminar</span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

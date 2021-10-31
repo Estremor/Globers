@@ -1,0 +1,35 @@
+﻿@model Globers.Models.AutoresHasLibroModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AutoresHasLibroModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AutoresId" class="control-label"></label>
+                @Html.DropDownListFor(model => model.AutoresId, new SelectList(ViewBag?.LisAutor, "Value","Text"))
+                <span asp-validation-for="AutoresId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LibrosIsbn" class="control-label"></label>
+                @Html.DropDownListFor(model => model.LibrosIsbn, new SelectList(ViewBag?.ListLibro, "Value","Text"))
+                <span asp-validation-for="LibrosIsbn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
